@@ -1,6 +1,6 @@
 RubyEuler
 
-An attempt to hack the problems from Project Euler in Ruby.
+An attempt to solve the problems from Project Euler in Ruby.
 
 Each problem is contained in file problemNUMBER.py,
 where NUMBER stands for the number of the problem on the list of problems
