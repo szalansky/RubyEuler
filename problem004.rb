@@ -7,7 +7,7 @@ result = 0
 def isPalindrome(n)
   flag = true
   n = n.to_s
-  0.upto(n.length/2) do |i|
+  0.upto(n.length/2 - 1) do |i|
     if n[i] != n[n.length - 1 - i]
       flag = false
       break
