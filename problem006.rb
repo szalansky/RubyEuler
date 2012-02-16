@@ -1,7 +1,7 @@
 # Find the difference between the sum of the squares
  # of the first one hundred natural numbers and the square of the sum.
  
-def sumOfSquares(range)
+def sum_of_squares(range)
   result = 1
   for number in 2 .. range
     result += number**2
@@ -9,7 +9,7 @@ def sumOfSquares(range)
   result
 end
 
-def squareOfSum(range)
+def square_of_sum(range)
   result = 1
   for number in 2 .. range
     result += number
@@ -17,4 +17,4 @@ def squareOfSum(range)
   result**2
 end
 
-puts squareOfSum(100) - sumOfSquares(100)
+puts square_of_sum(100) - sum_of_squares(100)

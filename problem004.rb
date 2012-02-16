@@ -4,7 +4,7 @@
 
 result = 0
 
-def isPalindrome(n)
+def is_palindrome(n)
   flag = true
   n = n.to_s
   0.upto(n.length/2 - 1) do |i|
@@ -18,7 +18,7 @@ end
 
 for i in 100 .. 999
   for j in 100 .. 999
-    if isPalindrome(i * j)
+    if is_palindrome(i * j)
       result = i * j if i * j > result
     end
   end
