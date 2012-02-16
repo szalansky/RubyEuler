@@ -4,7 +4,7 @@
 #What is the smallest positive number
 # that is evenly divisible by all of the numbers from 1 to 20?
 
-load "ArrayUtils.rb"
+load "array_utils.rb"
 
 $base_numbers = [2, 3, 5, 7, 11, 13, 17, 19]
 $result_map = Array.new($base_numbers.length, "1").to_h($base_numbers)
