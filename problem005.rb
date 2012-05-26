@@ -1,34 +1,29 @@
-#2520 is the smallest number that can be divided
+# 2520 is the smallest number that can be divided
 # by each of the numbers from 1 to 10 without any remainder.
 
-#What is the smallest positive number
+# What is the smallest positive number
 # that is evenly divisible by all of the numbers from 1 to 20?
 
-load "array_utils.rb"
+primes_to_exponent = Hash.new
+prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19].each do |n|
+  primes_to_exponent[n] = 0
+end
 
-$base_numbers = [2, 3, 5, 7, 11, 13, 17, 19]
-$result_map = Array.new($base_numbers.length, "1").to_h($base_numbers)
-
-def result(number, prime_numbers, result)
+11.upto(20) do |n|
   prime_numbers.each do |d|
-    n = number
     counter = 0
-    while n % d == 0 && n > 1
+    while n % d == 0
       n /= d
       counter += 1
     end
-    if counter > $result_map[d].to_i then $result_map[d] = counter end
+    primes_to_exponent[d] = counter if counter > primes_to_exponent[d]
   end
-end
-
-11.upto(20) do |i|
-  result(i, $base_numbers, $result_map)
 end
 
 result = 1
 
-$result_map.each_key do |key|
-  exponent = $result_map[key].to_i
+primes_to_exponent.each_key do |key|
+  exponent = primes_to_exponent[key]
   result *= key**exponent
 end
 

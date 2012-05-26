@@ -3,12 +3,12 @@
 
 
 n = 600851475143
-pF = 1
+prime_factor = 1
 
-2.upto(Math.sqrt(n)) do |d|
-  pF = d if n % d == 0
-  n /= d while n % d == 0
-  break if n == 1 
+2.upto(Math.sqrt(n)) do |i|
+  prime_factor = i if n % i == 0
+  n /= i while n % i == 0
+  break if n == 1
 end
 
-puts pF
+puts prime_factor
