@@ -2,6 +2,6 @@ RubyEuler
 
 An attempt to solve the problems from Project Euler in Ruby.
 
-Each problem is contained in file problemNUMBER.py,
+Each problem is contained in file problemNUMBER.rb,
 where NUMBER stands for the number of the problem on the list of problems
 available at http://projecteuler.net/problems.
