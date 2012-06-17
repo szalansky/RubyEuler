@@ -23,15 +23,13 @@ numbers =
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48".split(" ")
 
 grid = Array.new(20)
-i = 0
 
-while i < numbers.length
+(0 ... numbers.length).each do |i|
   if i % 20 == 0
     grid[i/20] = Array.new(20)
     (0 ... 20).each do |j|
       grid[i/20][j] = numbers[i+j].to_i
     end
   end
-  i += 1
 end
 

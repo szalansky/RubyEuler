@@ -3,11 +3,9 @@
 
 limit = 2000000
 sum = 0
-i = 2
 
-while i < limit
+(2 ... limit).each do |i|
   sum += i if (2 .. Math.sqrt(i).floor).all? { |el| i % el != 0 }
-  i += 1
 end
 
 puts sum
