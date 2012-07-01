@@ -4,19 +4,11 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million,
 # find the sum of the even-valued terms.
 
-def fib(n)
-  a, b = 0, 1
-  (1 .. n).each do
-    a, b = b, a + b
-  end
-  a
-end
-
-sum = 0
+sum, a, b = 0, 0, 1
 (1 .. 1.0/0).each do |i|
-  term = fib(i)
-  sum = sum + term if term % 2 == 0
-  break if term > 4000000
+  a, b = b, a + b
+  sum = sum + a if a % 2 == 0
+  break if a > 4000000
 end
 
 puts sum
